@@ -1,0 +1,159 @@
+[
+  {
+    "table": "users",
+    "columns": [
+      "user_id",
+      "name",
+      "email",
+      "password_hash",
+      "avatar_url",
+      "level",
+      "created_at",
+      "role"
+    ]
+  },
+  {
+    "table": "Lessons",
+    "columns": [
+      "lessons_id",
+      "title",
+      "content",
+      "description",
+      "level",
+      "created_by_user",
+      "created_at",
+      "id_topic"
+    ]
+  },
+  {
+    "table": "Topics",
+    "columns": [
+      "topic_id",
+      "title",
+      "description",
+      "created_at"
+    ]
+  },
+  {
+    "table": "Quizzes",
+    "columns": [
+      "id",
+      "id_lessons",
+      "tieu_de",
+      "ngay_tao"
+    ]
+  },
+  {
+    "table": "Questions",
+    "columns": [
+      "id",
+      "quiz_id",
+      "content",
+      "correct_answer",
+      "option_a",
+      "option_b",
+      "option_c",
+      "option_d"
+    ]
+  },
+  {
+    "table": "QuizResults",
+    "columns": [
+      "id",
+      "user_id",
+      "quiz_id",
+      "score",
+      "total_questions",
+      "correct_answers",
+      "time_taken",
+      "taken_at"
+    ]
+  },
+  {
+    "table": "QuizAnswerDetails",
+    "columns": [
+      "id",
+      "quiz_result_id",
+      "question_id",
+      "selected_answer",
+      "correct_answer",
+      "is_correct"
+    ]
+  },
+  {
+    "table": "QuizRanking",
+    "columns": [
+      "id",
+      "quiz_id",
+      "user_id",
+      "score",
+      "rank",
+      "updated_at"
+    ]
+  },
+  {
+    "table": "UserLevelRanking",
+    "columns": [
+      "id",
+      "user_id",
+      "level",
+      "total_score",
+      "rank_level",
+      "updated_at"
+    ]
+  },
+  {
+    "table": "UserTotalRanking",
+    "columns": [
+      "id",
+      "user_id",
+      "total_score_all_levels",
+      "rank_total",
+      "updated_at"
+    ]
+  },
+  {
+    "table": "FavoriteLessons",
+    "columns": [
+      "id_user",
+      "id_lessons",
+      "created_at"
+    ]
+  },
+  {
+    "table": "MarkedQuestions",
+    "columns": [
+      "user_id",
+      "question_id",
+      "note"
+    ]
+  },
+  {
+    "table": "StudyLogs",
+    "columns": [
+      "id",
+      "user_id",
+      "action",
+      "quiz_id",
+      "action_time"
+    ]
+  },
+  {
+    "table": "ErrorReports",
+    "columns": [
+      "id",
+      "user_id",
+      "lesson_id",
+      "question_id",
+      "error_content",
+      "status",
+      "reported_at"
+    ]
+  },
+  {
+    "table": "UserID_Sequence",
+    "columns": [
+      "last_number"
+    ]
+  }
+]
